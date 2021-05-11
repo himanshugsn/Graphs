@@ -1,7 +1,7 @@
 import java.util.*;
 public class graph {
     static ArrayList<ArrayList<Integer>> arr = new ArrayList<ArrayList<Integer>>();
-    int[] visted;
+    static int[] visited;
     public static void dfs(int v){
         visited[v] = 1;
         System.out.println(v);
@@ -22,6 +22,7 @@ public class graph {
         while(m > 0){
             int a = s.nextInt();
             int b = s.nextInt();
+            if(arr.get(a) != null)
             arr.get(a).add(b);
             m--;
         }
